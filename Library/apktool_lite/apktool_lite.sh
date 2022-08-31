@@ -1,4 +1,4 @@
 # kakathic
-Taive "$Txurl" "$Txtmp"
-unzip -o "$Txtmp" -d "/data/tools"
-rm -fr "$Txtmp"
+Taive "https://github.com/kakathic/Tools/raw/Vip/Library/$1/$1$pb.zip" "/data/tools/tmp/$1"
+unzip -o "/data/tools/tmp/$1" -d "/data/tools"
+rm -fr "/data/tools/tmp/$1"
