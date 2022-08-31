@@ -1,0 +1,1 @@
+exec java -Xmx512m -Djava.io.tmpdir=/data/tools/tmp -jar /data/tools/lib/Tools/apktool.jar "$@"
