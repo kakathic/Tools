@@ -1,5 +1,5 @@
 # kakathic
-Taive "https://github.com/kakathic/Tools/raw/Vip/Library/$1/$1$pb.zip" tmp/$1
-unzip -o tmp/$1 -d ./
-[ -e tmp/$1 ] && echo > ck/$1$pb
-rm -fr tmp/$1
+Taive "https://github.com/kakathic/Tools/raw/Vip/Library/$1/$1$pb.zip" $HOME/tmp/$1
+unzip -o $HOME/tmp/$1 -d $HOME
+[ -e $HOME/tmp/$1 ] && echo > $HOME/ck/$1$pb
+rm -fr $HOME/tmp/$1
