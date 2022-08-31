@@ -1,6 +1,5 @@
 # kakathic
 Xu_install zip
-Xu_install jre
 Xu_install aapt
 Xu_install aapt2
 Taive "https://github.com/iBotPeaches/Apktool/releases/download/v${2//_/}/$1$pb.jar" $HOME/lib/Tools/$1.jar
