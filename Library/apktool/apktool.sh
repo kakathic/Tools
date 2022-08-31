@@ -1,5 +1,6 @@
 # kakathic
 Xu_install zip
+Xu_install jre
 Taive "https://github.com/iBotPeaches/Apktool/releases/download/v${2//_/}/$1$pb.jar" lib/Tools/$1.jar
 Taive "https://github.com/kakathic/Tools/raw/Vip/Library/apktool/apktool" bin/apktool
 mkdir -p tmp/prebuilt/linux
