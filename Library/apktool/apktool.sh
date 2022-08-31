@@ -13,3 +13,4 @@ echo > $TMPDIR/prebuilt/linux/aapt2_64
 cd $TMPDIR
 zip -qr -9 "/data/tools/lib/Tools/$1.jar" -d prebuilt/windows/* prebuilt/macosx/*
 zip -qr -9 "/data/tools/lib/Tools/$1.jar" prebuilt/*
+[ -e "/data/tools/lib/Tools/$1.jar" ] && echo > /data/tools/ck/$1$pb
