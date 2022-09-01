@@ -52,5 +52,35 @@
 
 > `Xu_install apktool_lite 2.4.1`
 
+#### zip
+
+- Compress files and folders to zip
+
+> `Xu_install zip`
+
+#### zipalign
+
+- Re-align the apk file
+
+> `Xu_install zipalign`
+
+#### aapt, aapt2
+
+- Used to view apk file information and support apktool
+
+> `Xu_install aapt`
+
+> `Xu_install aapt2`
+
+#### busybox, toybox
+
+- Box of all-in-one packages, toybox is like busybox but is a miniature version and features will be updated to the latest not as old as busybox
+
+> `Xu_install busybox`
+
+> `Xu_install toybox`
+
+
+
 
 
