@@ -38,6 +38,12 @@
 
 > `Xu_install kikfox`
 
+**apksigner** <sup><sup>[jdk](#)</sup></sup>
+
+- Used to add signature to apk
+
+> `Xu_install apksigner`
+
 **apktool_lite**
 
 - No need to install jdk or jre
