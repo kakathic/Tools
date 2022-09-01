@@ -2,12 +2,11 @@
 
 PROOT_LOADER=$HOME/libexec/proot/loader
 PROOT_LOADER_32=$HOME/libexec/proot/loader32
-export PROOT_L2S_DIR="$TEMP_DIR"
-export PROOT_TMP_DIR="$TEMP_DIR"
-export PATH="$HOME/usr/bin:$HOME/bin:$PATH"
+export PROOT_L2S_DIR="$TMPDIR"
+export PROOT_TMP_DIR="$TMPDIR"
 export TERMSH_UID="$(id -u)"
 
-ARGS="proot --link2symlink -H -p -L -r $HOME -w / -b /system -b /data -b $HOME/bin:/bin -b $HOME/bin:/usr/bin"
+ARGS="proot --link2symlink -H -p -L -r $HOME -w / -b /system -b /data -b $HOME/bin:/bin"
 
 if [ -e /dev ]; then
 ARGS="$ARGS -b /dev"
