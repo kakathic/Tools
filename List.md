@@ -12,7 +12,7 @@
 
 - Enter the package names below to install
 
-**jdk**
+#### jdk
 
 - Used to run packages like apktool, apksigner
 
@@ -24,7 +24,7 @@
 
 > `Xu_install jre`
 
-**apktool** <sup><sup>[jdk](#)</sup></sup>
+**apktool** <sup><sup>[jdk](#jdk)</sup></sup>
 
 - Need to install jdk or jre to run
 
@@ -32,13 +32,13 @@
 
 > `Xu_install apktool 2.6.1`
 
-**kikfox** <sup><sup>[jdk](#)</sup></sup>
+**kikfox** <sup><sup>[jdk](#jdk)</sup></sup>
 
 - Same as apktool but modified by @kikfox
 
 > `Xu_install kikfox`
 
-**apksigner** <sup><sup>[jdk](#)</sup></sup>
+**apksigner** <sup><sup>[jdk](#jdk)</sup></sup>
 
 - Used to add signature to apk
 
