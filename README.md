@@ -26,13 +26,9 @@
   - For example:
 
   > <sup># kakathic<br/>
-    . /data/data/bin.mt.plus/tome/term/Xu.sh<br/>
-    Xu_install busybox<br/>
-    busybox</sup>
-<br/>
-  - Save folder bookmarks
-
-  > /data/data/bin.mt.plus/tome
+         . /data/data/bin.mt.plus/tome/term/Xu.sh<br/>
+         Xu_install busybox<br/>
+         busybox</sup>
 
 - Module magisk
 
