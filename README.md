@@ -12,7 +12,7 @@
 
   - Copy below command line and paste in Terminal
 
-   > <sup>kk="/data/data/bin.mt.plus/tome/term" && mkdir -p $kk && curl -# -L -k https://github.com/kakathic/Tools/raw/Vip/Xu.sh -o $kk/Xu.sh && chmod -R 777 $kk/Xu.sh</sup>
+   > <sup>kk="/data/data/bin.mt.plus/tome/term" && mkdir -p $kk && curl -# -L -k https://github.com/kakathic/Tools/raw/Vip/Xu.sh -o $kk/Xu.sh && chmod -R 777 $kk</sup>
 
   - Run command
 
