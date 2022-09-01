@@ -54,7 +54,7 @@ Taive "https://github.com/kakathic/Tools/raw/Vip/Library/$1/README.md" "$TMPDIR/
 [ "$(grep -icm1 '#\ kakathic' $TMPDIR/$1.sh)" == 1 ] && chmod 777 "$TMPDIR/$1.sh" || (echo "File download error" >&2; exit)
 cd $HOME
 . "$TMPDIR/$1.sh"
-chmod -R 777 $HOME/bin
+chmod -R 777 $HOME
 rm -fr $TMPDIR/*
 fi
 }
