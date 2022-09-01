@@ -10,6 +10,8 @@
 
 - Enter the package names below to install
 
+- [View Full](https://github.com/kakathic/Tools/tree/Vip/Library)
+
 #### jdk
 
 - Used to run packages like apktool, apksigner
