@@ -18,13 +18,13 @@
 
 > `Xu_install jdk`
 
-**jre**
+#### jre
 
 - It's the same as jdk, but it's a miniaturized version that only works on the magisk module 
 
 > `Xu_install jre`
 
-**apktool** <sup><sup>[jdk](#jdk)</sup></sup>
+#### apktool <sup><sup>[jdk](#jdk)</sup></sup>
 
 - Need to install jdk or jre to run
 
@@ -32,19 +32,19 @@
 
 > `Xu_install apktool 2.6.1`
 
-**kikfox** <sup><sup>[jdk](#jdk)</sup></sup>
+#### kikfox <sup><sup>[jdk](#jdk)</sup></sup>
 
 - Same as apktool but modified by @kikfox
 
 > `Xu_install kikfox`
 
-**apksigner** <sup><sup>[jdk](#jdk)</sup></sup>
+#### apksigner <sup><sup>[jdk](#jdk)</sup></sup>
 
 - Used to add signature to apk
 
 > `Xu_install apksigner`
 
-**apktool_lite**
+#### apktool_lite
 
 - No need to install jdk or jre
 
