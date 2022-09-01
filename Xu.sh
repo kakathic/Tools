@@ -12,11 +12,15 @@ export PATH=$HOME/bin:$TOME/files/term/usr/bin:$TOME/home/bin:$TOME/files/term/u
 
 if [ "$ABI" = "x86" ]; then
 export ARCH=x86
+export ARMT=i686
 elif [ "$ABI" = "arm64-v8a" ]; then
 export ARCH=arm64
+export ARMT=arm64
 elif [ "$ABI" = "x86_64" ]; then
 export ARCH=x64
+export ARMT=x86-64
 else
+export ARMT=arm
 export ARCH=arm
 export ABI=armeabi-v7a
 fi
