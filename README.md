@@ -64,4 +64,8 @@
 
   > <sup>Xu_install apktool 2.6.1<sup>
 
+**`Delete_all`**
+
+- Delete all downloaded data and all packages 
+
 - See more: [Package](List.md)
