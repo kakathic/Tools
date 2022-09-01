@@ -68,6 +68,7 @@ fi
 Delete_all(){
 rm -fr $TOME/files/term/usr/*
 rm -fr $TOME
+clear
 }
 
 # Internet
