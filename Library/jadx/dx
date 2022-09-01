@@ -1,1 +1,1 @@
-exec java -Xmx4g -jar $HOME/lib/Tools/jadx/dalvik-dx*.jar "$@"
+exec java -Xmx4g -cp $HOME/lib/Tools/jadx/dalvik-dx*.jar com.android.dx.command.Main "$@"
