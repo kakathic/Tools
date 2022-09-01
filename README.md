@@ -46,13 +46,13 @@
 
 - Used to download files
 
-> <sup>Taive "https://kakathic.com/file.txt" "/sdcard/save.txt"<sup>
+   > <sup>Taive "https://kakathic.com/file.txt" "/sdcard/save.txt"<sup>
 
 **Xem**
 
 - View online files like txt, xml etc
 
-> <sup>Xem "https://kakathic.com/file.txt"<sup>
+   > <sup>Xem "https://kakathic.com/file.txt"<sup>
 
 
 
