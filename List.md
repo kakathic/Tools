@@ -90,7 +90,7 @@
 
 #### arsctool
 
-- File editing support resources.arsc > xml
+- File editing support resources.arsc
 
 > `Xu_install arsctool`
 
