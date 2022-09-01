@@ -29,7 +29,10 @@
            Xu_install busybox<br/>
            busybox</sup><br/>
 
-  - Save this folder bookmarks <sup>`/data/data/bin.mt.plus/tome`</sup>
+  - Save this folder bookmarks
+
+
+   > <sup>/data/data/bin.mt.plus/tome</sup>
 
 - Module magisk
 
