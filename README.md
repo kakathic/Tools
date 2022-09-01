@@ -42,13 +42,13 @@
 
 - Write it correctly in uppercase or lowercase as below 
 
-**Taive**
+**`Taive`**
 
 - Used to download files
 
    > <sup>Taive "https://kakathic.com/file.txt" "/sdcard/save.txt"<sup>
 
-**Xem**
+**`Xem`**
 
 - View online files like txt, xml etc
 
