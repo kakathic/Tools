@@ -64,3 +64,4 @@ Xem(){
 [ -e /system/bin/curl ] && curl -s -k -G -L -H "$User" --connect-timeout 20 "$1" || wget -q --header "$User" --no-check-certificate -O - "$1"
 }
 
+chmod -R 777 $HOME/bin
