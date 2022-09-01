@@ -28,6 +28,8 @@
 
 - May change to versions older than 2.5.0 etc
 
+> `Xu_install apktool`
+
 > `Xu_install apktool 2.6.1`
 
 #### kikfox <sup><sup>[jdk](#jdk)</sup></sup>
