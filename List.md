@@ -24,7 +24,7 @@
 
 > `Xu_install jre`
 
-**apktool** <sup><sup>[jdk, jre](#)</sup></sup>
+**apktool** <sup><sup>[jdk](#)</sup></sup>
 
 - Need to install jdk or jre to run
 
@@ -32,7 +32,7 @@
 
 > `Xu_install apktool 2.6.1`
 
-**kikfox** <sup><sup>[jdk, jre](#)</sup></sup>
+**kikfox** <sup><sup>[jdk](#)</sup></sup>
 
 - Same as apktool but modified by @kikfox
 
