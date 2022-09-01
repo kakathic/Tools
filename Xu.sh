@@ -48,7 +48,7 @@ unset mklist
 Xu_install(){
 [ "$2" ] && pb="_$2"
 if [ ! -e "$HOME/ck/$1$pb" ];then
-echo "- Download $1..."
+echo -n "- Download $1..."
 Taive "https://github.com/kakathic/Tools/raw/Vip/Library/$1/README.md" "$TMPDIR/$1.sh"
 [ "$(grep -icm1 '#\ kakathic' $TMPDIR/$1.sh)" == 1 ] && chmod 777 "$TMPDIR/$1.sh" || (echo "File download error" >&2; exit)
 cd $HOME
