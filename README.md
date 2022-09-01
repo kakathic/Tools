@@ -19,7 +19,8 @@
 
   - To run in a .sh file, add the following command:
 
-  > <sup>. /data/data/bin.mt.plus/tome/term/Xu.sh</sup>
+  > <sup># kakathic<br/>
+         . /data/data/bin.mt.plus/tome/term/Xu.sh</sup>
 
   - Add the first line of that .sh file
 
