@@ -21,4 +21,4 @@ echo 'exec $HOME/bin/aapt2 "$@"' > $HOME/tmp/prebuilt/linux/aapt2_64
 cd $HOME/tmp
 zip -qr $HOME/lib/Tools/$1.jar prebuilt/*/*
 [ -e $HOME/lib/Tools/$1.jar ] && echo > $HOME/ck/$1$pb
-rm -fr $HOME/tmp/*
+
