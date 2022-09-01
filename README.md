@@ -59,5 +59,6 @@
 - Used to download additional packages like zip, busybox, etc
 
    > <sup>Xu_install zip<sup>
+
    > <sup>Xu_install apktool 2.6.1<sup>
 
