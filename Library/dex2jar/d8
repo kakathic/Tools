@@ -1,0 +1,1 @@
+exec java -Xmx4g -cp $HOME/lib/Tools/dex-tools-2.1-SNAPSHOT/lib/d8*.jar com.android.tools.r8.D8 "$@"
