@@ -29,6 +29,8 @@
            Xu_install busybox<br/>
            busybox</sup><br/>
 
+  - Save this folder bookmarks `/data/data/bin.mt.plus/tome`
+
 - Module magisk
 
   - Download module TShell.Zip
