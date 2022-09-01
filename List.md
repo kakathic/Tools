@@ -80,6 +80,19 @@
 
 > `Xu_install toybox`
 
+#### apksig
+
+- Same as apksigner but without jdk, jre
+
+- Support signature v1 - v2
+
+> `Xu_install apksig`
+
+#### arsctool
+
+- File editing support resources.arsc > xml
+
+> `Xu_install arsctool`
 
 
 
