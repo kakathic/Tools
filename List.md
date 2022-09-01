@@ -12,7 +12,19 @@
 
 - Enter the package names below to install
 
-**apktool**
+**jdk**
+
+- Used to run packages like apktool, apksigner
+
+> `Xu_install jdk`
+
+**jre**
+
+- It's the same as jdk, but it's a miniaturized version that only works on the magisk module 
+
+> `Xu_install jre`
+
+**apktool** <sup><sup>[jdk, jre](#jdk)</sup></sup>
 
 - Need to install jdk or jre to run
 
