@@ -88,7 +88,7 @@
 
 > `Xu_install apksig`
 
-#### arsctool
+#### arsctool <sup><sup>[jdk](#jdk)</sup></sup>
 
 - File editing support resources.arsc
 
