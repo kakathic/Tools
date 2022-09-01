@@ -1,1 +1,1 @@
-exec java -Xmx512m -Djava.io.tmpdir=$HOME/tmp -jar $HOME/lib/Tools/apktool.jar "$@"
+exec java -Xmx512M -Dfile.encoding=utf-8 -Djava.io.tmpdir=$HOME/tmp -jar $HOME/lib/Tools/apktool.jar "$@"
