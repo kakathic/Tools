@@ -1,5 +1,4 @@
-**Install**
----
+## Install
 
 > `Xu_install <package> <version>`
 
@@ -7,8 +6,7 @@
 
 - version: some packages will have versions
 
-**Package**
----
+## Package
 
 - Enter the package names below to install
 
