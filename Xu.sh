@@ -9,6 +9,7 @@ export LD_LIBRARY_PATH=$HOME/lib:$TOME/files/term/usr/lib:$TOME/home/lib
 export API=$(getprop ro.build.version.sdk)
 export ABI=$(getprop ro.product.cpu.abi)
 export PATH=$HOME/bin:$TOME/files/term/usr/bin:$TOME/home/bin:$TOME/files/term/usr/bin/applets:$PATH
+export JAVA_HOME=$HOME
 
 if [ "$ABI" = "x86" ]; then
 export ARCH=x86
