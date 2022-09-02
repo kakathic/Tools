@@ -10,3 +10,4 @@ mkdir -p $HOME/lib/Tools/jadx
 unzip -qo $HOME/tmp/$1 'lib/*' 'bin/jadx' -d $HOME/lib/Tools/jadx
 ln -sf $HOME/lib/Tools/jadx/bin/jadx $HOME/bin/jadx
 [ -e $HOME/tmp/$1 ] && echo > $HOME/ck/$1$pb
+sed -i 's|app_path=$0|app_path=$0; mkdir -p ./tmp/framework/app/system/input/rt|' $HOME/lib/Tools/jadx/bin/jadx
