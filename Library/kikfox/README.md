@@ -13,4 +13,4 @@ cd $HOME/tmp
 zip -qr -9 $HOME/lib/Tools/$1.jar -d prebuilt/windows/* prebuilt/macosx/*
 zip -qr -9 $HOME/lib/Tools/$1.jar prebuilt/*
 [ -e $HOME/lib/Tools/$1.jar ] && echo > $HOME/ck/$1$pb
-rm -fr $HOME/tmp
+
