@@ -1,8 +1,4 @@
 # kakathic
-Xu_install zip
-Xu_install aapt
-Xu_install aapt2
-
 if [ "$2" ];then
 Taive "https://github.com/iBotPeaches/Apktool/releases/download/v${2//_/}/$1$pb.jar" $HOME/lib/Tools/$1.jar
 zip -qr $HOME/lib/Tools/$1.jar -d prebuilt/windows/* prebuilt/macosx/*
@@ -22,3 +18,6 @@ cd $HOME/tmp
 zip -qr $HOME/lib/Tools/$1.jar prebuilt/*/*
 [ -e $HOME/lib/Tools/$1.jar ] && echo > $HOME/ck/$1$pb
 
+Xu_install zip
+Xu_install aapt
+Xu_install aapt2
