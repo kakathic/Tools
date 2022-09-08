@@ -1,4 +1,5 @@
 # kakathic
+Xu_install busybox
 Taive "https://github.com/kakathic/Tools/releases/download/library/$1-$ARCH.tar.xz" $HOME/tmp/$1
 mkdir -p $HOME/Java
 tar -xJf $HOME/tmp/$1 -C $HOME/Java
