@@ -1,7 +1,4 @@
 # kakathic
-Xu_install zip
-Xu_install aapt
-Xu_install aapt2
 Taive "https://github.com/kikfox/kikfox/raw/main/bin/$1.jar" $HOME/lib/Tools/$1.jar
 Taive "https://github.com/kakathic/Tools/raw/Vip/Library/$1/$1" $HOME/bin/$1
 mkdir -p $HOME/tmp/prebuilt/linux
@@ -13,4 +10,6 @@ cd $HOME/tmp
 zip -qr -9 $HOME/lib/Tools/$1.jar -d prebuilt/windows/* prebuilt/macosx/*
 zip -qr -9 $HOME/lib/Tools/$1.jar prebuilt/*
 [ -e $HOME/lib/Tools/$1.jar ] && echo > $HOME/ck/$1$pb
-
+Xu_install zip
+Xu_install aapt
+Xu_install aapt2
