@@ -120,16 +120,13 @@ cp -rf "$PTC" "$TMPDIR/Apk/$1.apk"
 pm uninstall $1 >&2
 echo "$(pm path "$1" | cut -d : -f2)" > "$TMPDIR/Apk/$1.txt"
 else
-[ -e "/data/tools/apk/$1.apk" ] && cp -rf "/data/tools/apk/$1.apk" "$TMPDIR/Apk/$1.apk" || cp -rf "$(magisk --path)/.magisk/mirror/$Systemroot11$PTC" "$TMPDIR/Apk/$1.apk"
-[ -e "$(magisk --path)/.magisk/mirror/$Systemroot11$PTC" ] || abort "- Lỗi không tìm thấy $1, $(find $(magisk --path)/.magisk/mirror/*/* -type f -name "${PTC##*/}")"
+[ -e "/data/tools/apk/$1.apk" ] && cp -rf "/data/tools/apk/$1.apk" "$TMPDIR/Apk/$1.apk" || cp -rf "$(find $(magisk --path)/.magisk/mirror -name "${PTC##*/}" -type f -not -path "*/mirror/data/*")" "$TMPDIR/Apk/$1.apk"
 echo "$PTC" > "$TMPDIR/Apk/$1.txt"
 fi
 }
 
 CPfile(){
-Pathfw="$(find /system* -type f -name "$1.jar")"
-[ -e $Pathfw ] || abort "- Lỗi không tìm thấy $1"
-cp -f "$(magisk --path)/.magisk/mirror/$Systemroot11$Pathfw" "$TMPDIR/Apk"
+cp -f "$(find $(magisk --path)/.magisk/mirror -type f -name "$1.jar" -not -path "*/mirror/data/*")" "$TMPDIR/Apk"
 echo "$Pathfw" > "$TMPDIR/Apk/$1.txt"
 }
 
@@ -225,11 +222,7 @@ $TMPDIR/Apk/tmp
 /data/tools/apk
 /data/tools/lib/Tools"
 
-if [ "$API" -ge 31 ];then
-miuik='miui-'
-else
-1Systemroot11='system_root'
-fi
+[ "$API" -ge 31 ] && miuik='miui-'
 
 unset vah
 unset mklist
