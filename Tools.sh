@@ -1,4 +1,6 @@
 # Kakathic
+
+TTvip=1
 ui_print(){ echo "$1"; sleep 0.005; }
 ui_print2(){ echo "  $1"; }
 Xan(){ echo "  $1" >&2; }
