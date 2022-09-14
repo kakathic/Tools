@@ -219,7 +219,7 @@ done
 }
 
 TTM "/data/tools/bin
-$TMPDIR/Apk
+$TMPDIR/Apk/tmp
 /data/tools/ck
 /data/tools/tmp
 /data/tools/apk
