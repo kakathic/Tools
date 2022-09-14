@@ -106,7 +106,7 @@ done
 
 Autoone(){
 Xan "MOD: $1 -> $2"
-for vakkddhh in $(find $3 -name "*.smali" -exec grep -l "sget-boolean .., $1" {} +); do
+for vakkddhh in $(find $3 -name "*.smali" -exec grep -l "sget-boolean .., $1" {} + 2>/dev/null); do
 [ -e $vakkddhh ] && ( echo "sed -i $(grep "sget-boolean .., $1" "$vakkddhh" | awk '{print "-e \"s|sget-boolean "$2" '$1'|const/4 "$2" '$2'|g\"" }' | sort | uniq | tr '\n' ' ') ${vakkddhh//\$/\\\$}" | sh ) || Xan "- Lỗi: $vakkddhh"
 [ -e $vakkddhh ] && echo "$vakkddhh" >> $TMPDIR/Apk/$(echo "$3" | sed "s|$TMPDIR/Apk/||g" | cut -d '/' -f1)/class
 done
