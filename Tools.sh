@@ -228,7 +228,7 @@ $TMPDIR/Apk/tmp
 if [ "$API" -ge 31 ];then
 miuik='miui-'
 else
-Systemroot11='system_root'
+1Systemroot11='system_root'
 fi
 
 unset vah
