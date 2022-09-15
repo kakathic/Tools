@@ -126,7 +126,7 @@ fi
 }
 
 CPfile(){
-Pathfw="$(find /sysyem* -type f -name "$1.jar" -not -path "*/data/*")"
+Pathfw="$(find /system* -type f -name "$1.jar" -not -path "*/data/*")"
 cp -f "$(find $(magisk --path)/.magisk/mirror -type f -name "$1.jar" -not -path "*/mirror/data/*")" "$TMPDIR/Apk"
 echo "$Pathfw" > "$TMPDIR/Apk/$1.txt"
 }
