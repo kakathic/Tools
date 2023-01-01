@@ -70,15 +70,15 @@ Xem(){
 # mount
 mrw () {
 for i in / system_root system vendor product; do
-mount $i 2>/dev/null || mount $i 2>/dev/null
-mount -o rw,remount $i 2>/dev/null || mount -o rw,remount $i 2>/dev/null
+/system/bin/mount $i 2>/dev/null || /system/bin/mount $i 2>/dev/null
+/system/bin/mount -o rw,remount $i 2>/dev/null || /system/bin/mount -o rw,remount $i 2>/dev/null
 done
 }
 
 mro () {
 for i in / system_root system vendor product; do
-mount -o ro,remount $i 2>/dev/null || mount -o ro,remount $i 2>/dev/null
-umount $i 2>/dev/null || umount $i 2>/dev/null
+/system/bin/mount -o ro,remount $i 2>/dev/null || /system/bin/mount -o ro,remount $i 2>/dev/null
+/system/bin/umount $i 2>/dev/null || /system/bin/umount $i 2>/dev/null
 done
 }
 
