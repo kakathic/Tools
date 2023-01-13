@@ -136,7 +136,7 @@ Giainen(){
 for vapk in $TMPDIR/Apk/*.*; do
 if [ "${vapk##*.}" == 'apk' ] || [ "${vapk##*.}" == 'jar' ];then
 PTd="$(cat ${vapk%.*}.txt)"
-ui_print "  Giải nén: ${PTd##*/}"
+[ "${PTd##*/}" ] && ui_print "  Giải nén: ${PTd##*/}" || abort "- Lỗi không tìm thấy file! ${PTd##*/}"
 ui_print
 mkdir -p ${vapk%.*}
 unzip -qo "$vapk" '*.dex' -d ${vapk%.*}
