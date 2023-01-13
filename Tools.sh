@@ -118,17 +118,17 @@ if [ "$(echo "$PTC" | grep -cm1 '/data/')" == 1 ];then
 cp -rf $PTC "/data/tools/apk/$1.apk"
 cp -rf "$PTC" "$TMPDIR/Apk/$1.apk"
 pm uninstall $1 >&2
-echo "$(pm path "$1" | cut -d : -f2)" > "$TMPDIR/Apk/$1.txt"
+echo "$(pm path "$1" | cut -d : -f2)" | tee "$TMPDIR/Apk/$1.txt" >&2
 else
 [ -e "/data/tools/apk/$1.apk" ] && cp -f "/data/tools/apk/$1.apk" "$TMPDIR/Apk/$1.apk" || cp -f "$(magisk --path)/.magisk/mirror$PTC" "$TMPDIR/Apk/$1.apk"
-echo "$PTC" > "$TMPDIR/Apk/$1.txt"
+echo "$PTC" | tee "$TMPDIR/Apk/$1.txt" >&2
 fi
 }
 
 CPfile(){
 Pathfw="$(find /system* -type f -name "$1.jar" -not -path "*/data/*")"
 cp -f "$(magisk --path)/.magisk/mirror$Pathfw" "$TMPDIR/Apk"
-echo "$Pathfw" > "$TMPDIR/Apk/$1.txt"
+echo "$Pathfw" | tee "$TMPDIR/Apk/$1.txt" >&2
 }
 
 # giải nén file
