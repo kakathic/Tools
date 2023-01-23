@@ -120,13 +120,16 @@ cp -rf "$PTC" "$TMPDIR/Apk/$1.apk"
 pm uninstall $1 >&2
 echo "$(pm path "$1" | cut -d : -f2)" | tee "$TMPDIR/Apk/$1.txt" >&2
 else
-[ -e "/data/tools/apk/$1.apk" ] && cp -f "/data/tools/apk/$1.apk" "$TMPDIR/Apk/$1.apk" || cp -f "$(magisk --path)/.magisk/mirror$PTC" "$TMPDIR/Apk/$1.apk"
-echo "$PTC" | tee "$TMPDIR/Apk/$1.txt" >&2
+Papkhhj2="$(echo /*/app /*/framework /*/priv-app /*/*/app /*/*/framework /*/*/priv-app)"
+Pathfw2="$(find $Papkhhj2 -type f -name "${PTC##*/}" -not -path "*/data/*" | head -n1)"
+[ -e "/data/tools/apk/$1.apk" ] && cp -f "/data/tools/apk/$1.apk" "$TMPDIR/Apk/$1.apk" || cp -f "$(magisk --path)/.magisk/mirror$Pathfw2" "$TMPDIR/Apk/$1.apk"
+echo "$Pathfw2" | tee "$TMPDIR/Apk/$1.txt" >&2
 fi
 }
 
 CPfile(){
-Pathfw="$(find /*/*app -type f -name "$1.jar" -not -path "*/data/*")"
+Papkhhjg="$(echo /*/app /*/framework /*/priv-app /*/*/app /*/*/framework /*/*/priv-app)"
+Pathfw="$(find $Papkhhjg -type f -name "$1.jar" -not -path "*/data/*" | head -n1)"
 cp -f "$(magisk --path)/.magisk/mirror$Pathfw" "$TMPDIR/Apk"
 echo "$Pathfw" | tee "$TMPDIR/Apk/$1.txt" >&2
 }
@@ -136,7 +139,7 @@ Giainen(){
 for vapk in $TMPDIR/Apk/*.*; do
 if [ "${vapk##*.}" == 'apk' ] || [ "${vapk##*.}" == 'jar' ];then
 PTd="$(cat ${vapk%.*}.txt)"
-[ "${PTd##*/}" ] && ui_print "  Giải nén: ${PTd##*/}" || abort "- Lỗi không tìm thấy file! ${PTd##*/}"
+[ -e "$vapk" ] && ui_print "  Giải nén: ${PTd##*/}" || abort "- Lỗi không tìm thấy file! ${PTd##*/}"
 ui_print
 mkdir -p ${vapk%.*}
 unzip -qo "$vapk" '*.dex' -d ${vapk%.*}
