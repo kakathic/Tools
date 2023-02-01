@@ -121,7 +121,7 @@ pm uninstall $1 >&2
 echo "$(pm path "$1" | cut -d : -f2)" | tee "$TMPDIR/Apk/$1.txt" >&2
 else
 Pathfw2="$(find /*/app /*/*/app /*/priv-app /*/*/priv-app /*/framework /*/*/framework -type f -name "${PTC##*/}" -not -path "*/data/*" | head -n1)"
-Padddj="$(find /dev/jH6h/.magisk/mirror -type f -name "${PTC##*/}" -not -path "*/data/*" | head -n1)"
+Padddj="$(find $(magisk --path)/.magisk/mirror -type f -name "${PTC##*/}" -not -path "*/data/*" | head -n1)"
 [ -e "/data/tools/apk/$1.apk" ] && cp -rf "/data/tools/apk/$1.apk" "$TMPDIR/Apk/$1.apk" || cp -rf "$Padddj" "$TMPDIR/Apk/$1.apk"
 echo "$Pathfw2" | tee "$TMPDIR/Apk/$1.txt" >&2
 fi
@@ -129,7 +129,7 @@ fi
 
 CPfile(){
 Pathfw="$(find /*/app /*/*/app /*/priv-app /*/*/priv-app /*/framework /*/*/framework -type f -name "$1.jar" -not -path "*/data/*" | head -n1)"
-Padddjfn="$(find /dev/jH6h/.magisk/mirror -type f -name "$1.jar" -not -path "*/data/*" | head -n1)"
+Padddjfn="$(find $(magisk --path)/.magisk/mirror -type f -name "$1.jar" -not -path "*/data/*" | head -n1)"
 cp -rf "$Padddjfn" "$TMPDIR/Apk"
 echo "$Pathfw" | tee "$TMPDIR/Apk/$1.txt" >&2
 }
