@@ -171,7 +171,7 @@ fi
 done
 
 for Capk in $TMPDIR/Apk/*.*; do
-if [ "${Capk##*.}" == 'apk' ];then
+if [ "${Capk##*.}" == 'apk' ] && [ -e "${Capk%.*}.txt" ];then
 Papkp="$(cat ${Capk%.*}.txt)"
 if [ "$(unzip -l $Capk 2>/dev/null | grep -cm1 "lib/$ABI/")" == 1 ];then
 mkdir -p $MODPATH${Papkp%/*}/lib/$ARCH
