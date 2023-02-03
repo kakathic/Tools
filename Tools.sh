@@ -153,7 +153,7 @@ done
 Donggoi(){
 # Đóng gói apk
 for bapk in $TMPDIR/Apk/*.*; do
-if [ "${bapk##*.}" == 'apk' ] || [ "${bapk##*.}" == 'jar' ];then
+if [ -e "${bapk%.*}/class" ];then
 PTb="$(cat ${bapk%.*}.txt)"
 ui_print "  Đóng gói: ${PTb##*/}"
 ui_print
@@ -165,6 +165,8 @@ cd ${bapk%.*}
 zip -qr -0 $bapk '*.dex'
 zipalign -f 4 $bapk $TMPDIR/Apk/tmp/${bapk##*/} 
 cp -rf $TMPDIR/Apk/tmp/* $TMPDIR/Apk
+else
+rm -fr "$bapk"*
 fi
 done
 
