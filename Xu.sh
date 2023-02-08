@@ -28,14 +28,14 @@ fi
 
 if [ -e "$TOME/files/term/usr/etc/bash.bashrc" ] && [ ! -e "$HOME/term/ok" ];then
 echo > "$HOME/term/ok"
-echo ". $HOME/term/Xu.sh" > $TOME/files/term/usr/etc/bash.bashrc2
+echo "[ -e $HOME/term/Xu.sh ] && . $HOME/term/Xu.sh" > $TOME/files/term/usr/etc/bash.bashrc2
 cat $TOME/files/term/usr/etc/bash.bashrc >> $TOME/files/term/usr/etc/bash.bashrc2
 mv -f $TOME/files/term/usr/etc/bash.bashrc2 $TOME/files/term/usr/etc/bash.bashrc
 fi
 
 if [ -e "$TOME/home/.bashrc" ] && [ ! -e "$HOME/term/ok" ];then
 echo > "$HOME/term/ok"
-echo ". $HOME/term/Xu.sh" > $TOME/home/.bashrc2
+echo "[ -e $HOME/term/Xu.sh ] && . $HOME/term/Xu.sh" > $TOME/home/.bashrc2
 cat $TOME/home/.bashrc >> $TOME/home/.bashrc2
 mv -f $TOME/home/.bashrc2 $TOME/home/.bashrc
 fi
@@ -68,8 +68,7 @@ unset pb
 }
 
 Delete_all(){
-rm -fr $TOME/files/term/usr/*
-rm -fr $TOME
+rm -fr $TOME/files/term/usr/tome
 clear
 }
 
