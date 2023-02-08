@@ -1,4 +1,5 @@
 # kakathic
+
 export TOME=/data/data/bin.mt.plus
 export HOME=$TOME/tome
 export TMPDIR=$HOME/tmp
