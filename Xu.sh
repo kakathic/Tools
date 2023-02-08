@@ -41,17 +41,7 @@ cat $TOME/home/.bashrc >> $TOME/home/.bashrc2
 mv -f $TOME/home/.bashrc2 $TOME/home/.bashrc
 fi
 
-mklist="bin
-ck
-tmp
-lib/Tools"
-
-for vah in $mklist; do
-[ -e $vah ] || mkdir -p "$HOME/$vah"
-done
-
-unset vah
-unset mklist
+mkdir -p "$HOME/bin" "$HOME/ck" "$HOME/tmp" "$HOME/lib/Tools"
 
 # Download packages
 Xu_install(){
