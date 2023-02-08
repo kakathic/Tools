@@ -11,25 +11,9 @@
 
   - Open Termilal
 
-  - Copy below command line and paste in Terminal
+  - Copy below command line and paste in Terminal, or file.sh
 
-  > <sup>kk="/data/data/bin.mt.plus/tome/term" && mkdir -p $kk && curl -# -L -k https://github.com/kakathic/Tools/raw/Vip/Xu.sh -o $kk/Xu.sh && chmod -R 777 $kk</sup>
-
-  - Run command
-
-  - To run in a .sh file, add the following command:
-
-  > <sup># kakathic<br/>
-         . /data/data/bin.mt.plus/tome/term/Xu.sh</sup>
-
-  - Add the first line of that .sh file
-
-  - For example:
-
-  > <sup># kakathic<br/>
-         . /data/data/bin.mt.plus/tome/term/Xu.sh<br/>
-         Xu_install busybox<br/>
-         busybox</sup>
+  > <sup># kakathic<br/>kk="/data/data/bin.mt.plus/tome/term";<br/>mkdir -p $kk;<br/>[ -e $kk/Xu.sh ] || curl -# -L -k https://github.com/kakathic/Tools/raw/Vip/Xu.sh -o $kk/Xu.sh;<br/>chmod -R 777 $kk;<br/>. /data/data/bin.mt.plus/tome/term/Xu.sh;<br/>Xu_install busybox<br/></sup>
 
 - Module magisk
 
