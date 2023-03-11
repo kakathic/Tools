@@ -3,8 +3,6 @@
 export TOME=/data/data/bin.mt.plus
 export HOME=$TOME/tome
 export TMPDIR=$HOME/tmp
-export TERM=xterm-256color
-export SHLVL=1
 export LIBC=$HOME/lib:$TOME/files/term/usr/lib:$TOME/home/lib
 export LD_LIBRARY_PATH=$HOME/lib:$TOME/files/term/usr/lib:$TOME/home/lib
 export API=$(getprop ro.build.version.sdk)
@@ -12,19 +10,24 @@ export ABI=$(getprop ro.product.cpu.abi)
 export PATH=$HOME/bin:$TOME/files/term/usr/bin:$TOME/home/bin:$TOME/files/term/usr/bin/applets:$PATH
 export JAVA_HOME=$HOME
 
+# aarch
 if [ "$ABI" = "x86" ]; then
 export ARCH=x86
 export ARMT=i686
+export ARKM=x86-i686
 elif [ "$ABI" = "arm64-v8a" ]; then
 export ARCH=arm64
 export ARMT=arm64
+export ARKM=armv8-aarch64
 elif [ "$ABI" = "x86_64" ]; then
 export ARCH=x64
 export ARMT=x86-64
+export ARKM=x86-i686
 else
 export ARMT=arm
 export ARCH=arm
 export ABI=armeabi-v7a
+export ARKM=armv7l-eabihf
 fi
 
 if [ -e "$TOME/files/term/usr/etc/bash.bashrc" ] && [ ! -e "$HOME/term/ok" ];then
@@ -41,33 +44,13 @@ cat $TOME/home/.bashrc >> $TOME/home/.bashrc2
 mv -f $TOME/home/.bashrc2 $TOME/home/.bashrc
 fi
 
-mkdir -p "$HOME/bin" "$HOME/ck" "$HOME/tmp" "$HOME/lib/Tools"
-
 # Download packages
-Xu_install(){
-[ "$2" ] && pb="_$2"
-if [ ! -e "$HOME/ck/$1$pb" ];then
-echo -n "- Download $1...";
-Taive "https://github.com/kakathic/Tools/raw/Vip/Library/$1/README.md" "$TMPDIR/$1.sh"
-[ "$(grep -icm1 '#\ kakathic' $TMPDIR/$1.sh)" == 1 ] && chmod 777 "$TMPDIR/$1.sh" || (echo "File download error" >&2; exit)
-cd $HOME
-. "$TMPDIR/$1.sh"
-chmod -R 777 $HOME
-rm -fr $TMPDIR/*
-fi
-unset pb
-}
+Vaik="WHVfaW5zdGFsbCAoKXsKaWYgWyAhIC1lICIkSE9NRS9jay8kMV8kMiIgXTt0aGVuCnVpX3ByaW50ICIgICRsb2FkICQxICQyLi4uIgp1aV9wcmludApUYWl2ZSAiaHR0cHM6Ly9naXRodWIuY29tL2tha2F0aGljL1Rvb2xzL3Jhdy9WaXAvTGlicmFyeS8kMS9SRUFETUUubWQiICIkSE9NRS90bXAvJDEiCi4gIiRIT01FL3RtcC8kMSIKZmk7IH07
+IGJhc2U2NCAoKSB7CmlmIFsgIiQxIiA9PSAiLXUiIF07dGhlbgpbICIkMSIgPT0gIi11IiBdICYmIHRlPSctZCcKc2VkIC1lICdzL+KBtS8wL2dJJyAtZSAncy/igbgvMS9nSScgLWUgJ3Mv4oG2LzIvZ0knIC1lICdzL+KBsC8zL2dJJyAtZSAncy/igbkvNC9nSScgLWUgJ3Mv4oG3LzUvZ0knIC1lICdzL8KyLzYvZ0knIC1lICdzL8K5LzcvZ0knIC1lICdzL+KBtC84L2dJJyAtZSAncy/Csy85L2dJJyB8IC9zeXN0ZW0vYmluL2Jhc2U2NCAkdGUgJDIKZWxpZiBbICIkMSIgPT0gIi1yIiBdO3RoZW4KWyAiJDEiID09ICItciIgXSAmJiB0ZT0nLXcwJwovc3lzdGVtL2Jpbi9iYXNlNjQgJHRlICQyIHwgc2VkIC1lICdzLzAv4oG1L2dJJyAtZSAncy8xL+KBuC9nSScgLWUgJ3MvMi/igbYvZ0knIC1lICdzLzMv4oGwL2dJJyAtZSAncy80L+KBuS9nSScgLWUgJ3MvNS/igbcvZ0knIC1lICdzLzYvwrIvZ0knIC1lICdzLzcvwrkvZ0knIC1lICdzLzgv4oG0L2dJJyAtZSAncy85L8KzL2dJJyAKZWxzZQovc3lzdGVtL2Jpbi9iYXNlNjQgJEAKZmk7IH07
+IERlbGV0ZV9hbGwoKXsKcm0gLWZyICRUT01FL2ZpbGVzL3Rlcm0vdXNyL3RvbWUKY2xlYXI7IH07
+"
 
-Delete_all(){
-rm -fr $TOME/files/term/usr/tome
-clear
-}
+# test
+eval "$(echo "$Vaik" | base64 -d)"
 
-# Internet
-User="User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0"
-Taive(){
-[ -e /system/bin/curl ] && curl -s -k -L -H "$User" --connect-timeout 20 "$1" -o "$2" || wget -q --header "$User" --no-check-certificate "$1" -O "$2" >&2
-}
-Xem(){
-[ -e /system/bin/curl ] && curl -s -k -G -L -H "$User" --connect-timeout 20 "$1" || wget -q --header "$User" --no-check-certificate -O - "$1"
-}
+mkdir -p "$HOME/bin" "$HOME/ck" "$HOME/tmp" "$HOME/log" "$HOME/lib/Tools"
