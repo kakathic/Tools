@@ -1,1 +1,0 @@
-exec java -Xmx512m -Djava.io.tmpdir=$HOME/tmp -jar $HOME/lib/Tools/apkeditor.jar "$@"
