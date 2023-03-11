@@ -1,6 +1,6 @@
 ## Install
 
-> `Xu_install <package> <version>`
+> `Xu_install <package> <version>`<br/>`Xu_install static <package>`
 
 - package: are the packages below 
 
@@ -22,7 +22,7 @@
 
 - It's the same as jdk, but it's a miniaturized version that only works on the magisk module 
 
-> `Xu_install jre`
+> `Xu_install static jre`
 
 #### apktool <sup><sup>[jdk](#jdk)</sup></sup>
 
@@ -30,7 +30,7 @@
 
 - May change to versions older than 2.5.0 etc
 
-> `Xu_install apktool`
+> `Xu_install static apktool`
 
 > `Xu_install apktool 2.6.1`
 
@@ -38,13 +38,13 @@
 
 - Same as apktool but modified by @kikfox
 
-> `Xu_install kikfox`
+> `Xu_install static kikfox`
 
 #### apksigner <sup><sup>[jdk](#jdk)</sup></sup>
 
 - Used to add signature to apk
 
-> `Xu_install apksigner`
+> `Xu_install static apksigner`
 
 #### apktool_lite
 
@@ -52,7 +52,7 @@
 
 - Some features will be limited
 
-> `Xu_install apktool_lite`
+> `Xu_install static apktool_lite`
 
 > `Xu_install apktool_lite 2.4.1`
 
@@ -60,29 +60,29 @@
 
 - Compress files and folders to zip
 
-> `Xu_install zip`
+> `Xu_install static zip`
 
 #### zipalign
 
 - Re-align the apk file
 
-> `Xu_install zipalign`
+> `Xu_install static zipalign`
 
 #### aapt, aapt2
 
 - Used to view apk file information and support apktool
 
-> `Xu_install aapt`
+> `Xu_install static aapt`
 
-> `Xu_install aapt2`
+> `Xu_install static aapt2`
 
 #### busybox, toybox
 
 - Box of all-in-one packages, toybox is like busybox but is a miniature version and features will be updated to the latest not as old as busybox
 
-> `Xu_install busybox`
+> `Xu_install static busybox`
 
-> `Xu_install toybox`
+> `Xu_install static toybox`
 
 #### apksig
 
