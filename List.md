@@ -90,13 +90,13 @@
 
 - Support signature v1 - v2
 
-> `Xu_install apksig`
+> `Xu_install static apksig`
 
 #### arsctool <sup><sup>[jdk](#jdk)</sup></sup>
 
 - File editing support resources.arsc
 
-> `Xu_install arsctool`
+> `Xu_install static arsctool`
 
 
 
