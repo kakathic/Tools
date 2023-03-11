@@ -13,7 +13,7 @@
 
   - Copy below command line and paste in Terminal, or file.sh
 
-  > <sup># kakathic<br/>kk="/data/data/bin.mt.plus/tome/term";<br/>mkdir -p $kk;<br/>[ -e $kk/Xu.sh ] || curl -# -L -k https://github.com/kakathic/Tools/raw/Vip/Xu.sh -o $kk/Xu.sh;<br/>. /data/data/bin.mt.plus/tome/term/Xu.sh;<br/>Xu_install busybox<br/></sup>
+  > <sup># kakathic<br/>kk="/data/data/bin.mt.plus/tome/term";<br/>mkdir -p $kk;<br/>[ -e $kk/Xu.sh ] || curl -# -L -k https://github.com/kakathic/Tools/raw/Vip/Xu.sh -o $kk/Xu.sh;<br/>. /data/data/bin.mt.plus/tome/term/Xu.sh;<br/>Xu_install static busybox<br/></sup>
 
 - Module magisk
 
