@@ -8,6 +8,6 @@ Taive "http://landley.net/toybox/bin/toybox-i686" $HOME/bin/$1
 else
 Taive "http://landley.net/toybox/bin/toybox-armv7l" $HOME/bin/$1
 fi
-[ -e $HOME/bin/$1 ] && echo > $HOME/ck/$1
+[ -e $HOME/bin/$1_$2 ] && echo > $HOME/ck/$1_$2
 
 
