@@ -1,0 +1,1 @@
+exec java -Xmx4g -cp $HOME/lib/Tools/jadx/lib/r8*.jar com.android.tools.r8.R8 "$@"

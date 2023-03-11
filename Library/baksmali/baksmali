@@ -1,0 +1,1 @@
+exec java -Xmx4g -jar $HOME/lib/Tools/baksmali.jar "$@"

@@ -1,0 +1,51 @@
+# kakathic fake Root
+
+PROOT_LOADER=$HOME/libexec/proot/loader
+PROOT_LOADER_32=$HOME/libexec/proot/loader32
+export PROOT_L2S_DIR="$TMPDIR"
+export PROOT_TMP_DIR="$TMPDIR"
+export TERMSH_UID="$(id -u)"
+
+ARGS="proot --link2symlink -H -p -L -r $HOME -w / -b /system -b /data -b $HOME/bin:/bin"
+
+if [ -e /dev ]; then
+ARGS="$ARGS -b /dev"
+fi
+if [ -e /proc ]; then
+ARGS="$ARGS -b /proc"
+fi
+if [ -e /vendor ]; then
+ARGS="$ARGS -b /vendor"
+fi
+if [ -e /apex ]; then
+ARGS="$ARGS -b /apex"
+fi
+if [ -e /storage ]; then
+ARGS="$ARGS -b /storage"
+fi
+if [ -e "/linkerconfig/ld.config.txt" ]; then
+ARGS="$ARGS -b /linkerconfig/ld.config.txt"
+fi
+if [ -f /property_contexts ]; then
+ARGS="$ARGS -b /property_contexts"
+fi
+if [ -e /oem ]; then
+ARGS="$ARGS -b /oem"
+fi
+if [ -e /odm ]; then
+ARGS="$ARGS -b /odm"
+fi
+if [ -e /sys ]; then
+ARGS="$ARGS -b /sys"
+fi
+if [ -e /sbin ]; then
+ARGS="$ARGS -b /sbin"
+fi
+if [ -e /root ]; then
+ARGS="$ARGS -b /root"
+fi
+if [ -e /mnt ]; then
+ARGS="$ARGS -b /mnt"
+fi
+
+exec $ARGS $HOME/bin/env "$@"
