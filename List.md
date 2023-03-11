@@ -16,7 +16,7 @@
 
 - Used to run packages like apktool, apksigner
 
-> `Xu_install jdk`
+> `Xu_install static jdk`
 
 #### jre
 
