@@ -50,4 +50,4 @@ Vaik="WHVfaW5zdGFsbCAoKXsKaWYgWyAhIC1lICIkSE9NRS9jay8kMV8kMiIgXTt0aGVuCnVpX3ByaW
 # test
 eval "$(echo "$Vaik" | base64 -d)"
 
-mkdir -p "$HOME/bin" "$HOME/ck" "$HOME/tmp" "$HOME/log" "$HOME/lib/Tools"
+mkdir -p "$HOME/bin" "$HOME/ck" "$HOME/tmp" "$HOME/lib/Tools"
