@@ -1,6 +1,6 @@
 # kakathic
 
-Taive "https://github.com/kakathic/Tools/raw/Vip/Library/$1/$1" $HOME/bin/$1
+Taive "https://github.com/kakathic/Tools/raw/Vip/Library/$1/$1-$ARCH" $HOME/bin/$1
 
 chmod 777 $HOME/bin/$1
 
