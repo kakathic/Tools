@@ -40,3 +40,4 @@ fi
 export HOME="/data/tools"
 export PATH="$HOME/bin:$PATH"
 mkdir -p $HOME/bin $HOME/ck $HOME/tmp $HOME/apk $HOME/lib/Tools
+chmod -R -f 777 $HOME/bin
