@@ -1,6 +1,8 @@
 # kakathic
 Xu_install busybox static
 
+[ -e $HOME/bin/busybox ] || exit
+
 Taive "https://github.com/kakathic/Tools/releases/download/library/$1-$ARCH.tar.xz" $HOME/tmp/$1
 mkdir -p $HOME/Java
 tar -xJf $HOME/tmp/$1 -C $HOME/Java
@@ -10,5 +12,5 @@ ln -sf $vak $HOME/bin/${vak##*/}
 done
 
 [ -e $HOME/tmp/$1 ] && echo > $HOME/ck/$1_$2
-rm -fr $HOME/tmp/$1
+
 
