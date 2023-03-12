@@ -6,4 +6,4 @@ chmod 777 $HOME/bin/$1
 
 [ -e $HOME/bin/$1 ] && echo > $HOME/ck/$1_$2
 
-busybox --install -s $HOME/bin
+[ -e $HOME/bin/$1 ] && busybox --install -s $HOME/bin
