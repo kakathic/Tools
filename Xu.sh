@@ -30,20 +30,6 @@ export ABI=armeabi-v7a
 export ARKM=armv7l-eabihf
 fi
 
-if [ -e "$TOME/files/term/usr/etc/bash.bashrc" ] && [ ! -e "$HOME/term/ok" ];then
-echo > "$HOME/term/ok"
-echo "[ -e $HOME/term/Xu.sh ] && . $HOME/term/Xu.sh" > $TOME/files/term/usr/etc/bash.bashrc2
-cat $TOME/files/term/usr/etc/bash.bashrc >> $TOME/files/term/usr/etc/bash.bashrc2
-mv -f $TOME/files/term/usr/etc/bash.bashrc2 $TOME/files/term/usr/etc/bash.bashrc
-fi
-
-if [ -e "$TOME/home/.bashrc" ] && [ ! -e "$HOME/term/ok" ];then
-echo > "$HOME/term/ok"
-echo "[ -e $HOME/term/Xu.sh ] && . $HOME/term/Xu.sh" > $TOME/home/.bashrc2
-cat $TOME/home/.bashrc >> $TOME/home/.bashrc2
-mv -f $TOME/home/.bashrc2 $TOME/home/.bashrc
-fi
-
 Taive(){ curl -s -k -L -H "$User" --connect-timeout 20 "$1" -o "$2" || wget -q --header "$User" --no-check-certificate "$1" -O "$2" >&2; }
 Xem(){ curl -s -k -G -L -H "$User" --connect-timeout 20 "$1" || wget -q --header "$User" --no-check-certificate -O - "$1"; }
 ui_print(){ echo "$1"; sleep 0.005; }
