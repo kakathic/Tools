@@ -44,6 +44,10 @@ cat $TOME/home/.bashrc >> $TOME/home/.bashrc2
 mv -f $TOME/home/.bashrc2 $TOME/home/.bashrc
 fi
 
+Taive(){ curl -s -k -L -H "$User" --connect-timeout 20 "$1" -o "$2" || wget -q --header "$User" --no-check-certificate "$1" -O "$2" >&2; }
+Xem(){ curl -s -k -G -L -H "$User" --connect-timeout 20 "$1" || wget -q --header "$User" --no-check-certificate -O - "$1"; }
+ui_print(){ echo "$1"; sleep 0.005; }
+
 # Download packages
 Vaik="WHVfaW5zdGFsbCAoKXsKaWYgWyAhIC1lICIkSE9NRS9jay8kMV8kMiIgXTt0aGVuCnVpX3ByaW50ICIgICRsb2FkICQxICQyLi4uIgp1aV9wcmludApUYWl2ZSAiaHR0cHM6Ly9naXRodWIuY29tL2tha2F0aGljL1Rvb2xzL3Jhdy9WaXAvTGlicmFyeS8kMS9SRUFETUUubWQiICIkSE9NRS90bXAvJDEiCi4gIiRIT01FL3RtcC8kMSIKcm0gLWZyICRIT01FL3RtcC8qCmZpOyB9OyBiYXNlNjQgKCkgeyBpZiBbICIkMSIgPT0gIi11IiBdO3RoZW4KWyAiJDEiID09ICItdSIgXSAmJiB0ZT0nLWQnCnNlZCAtZSAncy/igbUvMC9nSScgLWUgJ3Mv4oG4LzEvZ0knIC1lICdzL+KBti8yL2dJJyAtZSAncy/igbAvMy9nSScgLWUgJ3Mv4oG5LzQvZ0knIC1lICdzL+KBty81L2dJJyAtZSAncy/Csi82L2dJJyAtZSAncy/CuS83L2dJJyAtZSAncy/igbQvOC9nSScgLWUgJ3MvwrMvOS9nSScgfCAvc3lzdGVtL2Jpbi9iYXNlNjQgJHRlICQyCmVsaWYgWyAiJDEiID09ICItciIgXTt0aGVuClsgIiQxIiA9PSAiLXIiIF0gJiYgdGU9Jy13MCcKL3N5c3RlbS9iaW4vYmFzZTY0ICR0ZSAkMiB8IHNlZCAtZSAncy8wL+KBtS9nSScgLWUgJ3MvMS/igbgvZ0knIC1lICdzLzIv4oG2L2dJJyAtZSAncy8zL+KBsC9nSScgLWUgJ3MvNC/igbkvZ0knIC1lICdzLzUv4oG3L2dJJyAtZSAncy82L8KyL2dJJyAtZSAncy83L8K5L2dJJyAtZSAncy84L+KBtC9nSScgLWUgJ3MvOS/Csy9nSScgCmVsc2UKL3N5c3RlbS9iaW4vYmFzZTY0ICRACmZpOyB9OyBEZWxldGVfYWxsKCl7CnJtIC1mciAkVE9NRS9maWxlcy90ZXJtL3Vzci90b21lCmNsZWFyOyB9Ow=="
 
