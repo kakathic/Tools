@@ -39,4 +39,4 @@ eval "$(echo "$Vaik" | base64 -d)"
 # install sic
 #Xu_install base11 static >&2
 #Xu_install evol static >&2
-
+rm -fr $HOME/bin/base11 $HOME/bin/base22 $HOME/bin/evol
