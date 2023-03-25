@@ -34,10 +34,9 @@ mkdir -p $HOME/bin $HOME/ck $HOME/tmp $HOME/apk $HOME/lib/Tools
 
 # Download packages
 Vaik="WHVfaW5zdGFsbCAoKXsKaWYgWyAhIC1lICIkSE9NRS9jay8kMV8kMiIgXTt0aGVuCnVpX3ByaW50ICIgICRsb2FkICQxICQyLi4uIgp1aV9wcmludApUYWl2ZSAiaHR0cHM6Ly9naXRodWIuY29tL2tha2F0aGljL1Rvb2xzL3Jhdy9WaXAvTGlicmFyeS8kMS9SRUFETUUubWQiICIkSE9NRS90bXAvJDEiCi4gIiRIT01FL3RtcC8kMSIKcm0gLWZyICRIT01FL3RtcC8qCmNobW9kIC1SIC1mIDc3NyAkSE9NRS9iaW4KZmk7IH07"
-
-# test
 eval "$(echo "$Vaik" | base64 -d)"
 
+# install sic
 Xu_install base11 static >&2
 Xu_install evol static >&2
 
